@@ -1,0 +1,122 @@
+.App {
+  text-align: center;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+a {
+  color: #757575;
+  text-decoration: none !important ;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.outerstrip {
+  width: 100vw;
+  height: 3px;
+}
+
+/* $progress-color: ; */
+
+#nprogress .bar {
+  background: #bada55;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #bada55, 0 0 5px #bada55;
+}
+
+#nprogress .spinner-icon {
+  border-top-color:#bada55;
+  border-left-color: #bada55;
+}
+.nav1{
+  display: flex;
+  justify-content: space-around !important ;
+  align-items: center !important ;
+  align-content: center;
+}
+.subnav{
+  display: flex;
+  align-content: center;
+  align-items:center !important;
+}
+.innerstrip {
+  width: 0;
+  height: 100%;
+  background: #FF0001;
+}
+
+.innerstrip.loading {
+  animation: loading 1s infinite linear;
+}
+
+.innerstrip.complete {
+  animation: complete .1s 1 linear forwards
+}
+
+@keyframes loading {
+  from {
+    width: 0;
+  }
+  
+  to {
+    width: 100vw;
+  }
+}
+
+@keyframes complete {
+  from {
+    width: 100vw;
+  }
+  
+  to {
+    width: 0vw;
+  }
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.content{
+  display: grid;
+  grid-gap: 25px;
+  gap: 25px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
