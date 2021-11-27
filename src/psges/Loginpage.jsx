@@ -10,6 +10,9 @@ import { set_user } from '../redux/action/useraction';
 const Loginpage = ({set_user,user}) => {
     
 const responseGoogle = res =>{
+  if(res.error === "popup_closed_by_user"){
+    return alert(res.error)
+  }
    console.log(res)
     if(responseGoogle.error){console.error(res.error)};
     set_user({...res.profileObj,...res.tokenObj})
