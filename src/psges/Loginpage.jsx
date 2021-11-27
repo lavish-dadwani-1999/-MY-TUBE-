@@ -11,6 +11,9 @@ const Loginpage = ({set_user,user}) => {
     
 const responseGoogle = res =>{
    console.log(res)
+     if(res.error === "popup_closed_by_user"){
+    return alert(res.error)
+  }
     if(responseGoogle.error){console.error(res.error)};
     set_user({...res.profileObj,...res.tokenObj})
 }
